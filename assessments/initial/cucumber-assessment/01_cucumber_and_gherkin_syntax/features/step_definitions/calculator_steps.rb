@@ -17,14 +17,14 @@ Then /^the result should be (.*) on the screen$/ do |output|
   assert_equal output.to_f, @result
 end
 
-Given /^I have done some arithmetic$/ do |output|
+Given /^I have done some arithmetic$/ do
   @calc.push(3)
   @calc.push(4)
   @result = @calc.add
-  @calc.add
+  @calc.memadd
 end
 
-When /^I have (.*)$/ do
+When /^I have cleared the screen$/ do
   @calc.clear
 end
 
@@ -33,7 +33,7 @@ Then /^I should see the previously stored result$/ do
 end
 
 When /^I use the special constant (.*)$/ do |special_constant_name|
-  @calc.push_special __
+  @calc.push_special special_constant_name
 end
 
 Then /^the current value on the screen should be (.*)$/ do |output|
