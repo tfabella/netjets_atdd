@@ -6,7 +6,8 @@ module SouthwestInteractions
     visit_page SouthwestHomePage
   end
 
-  def view_flight_schedule
+  def set_airports
+
     on_page FlightSchedulePage do |page|
       page.departure_city =  'originAirport_displayed'
       page.arrival_city = 'destinationAirport_displayed'
