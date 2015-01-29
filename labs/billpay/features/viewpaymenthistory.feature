@@ -4,10 +4,10 @@ Feature: View Payment History
     When I go to my Payment History
     Then I can view all of my paid bills
 
-  Scenario: Sort my Payment History by most recent date
-    When I sort my payments by date
-    Then I can view all of my paid bills with the most recent payment displaying at the top of the list
-    And my oldest payment at the bottom of the list
+#  Scenario: Sort my Payment History by most recent date
+#    When I sort my payments by date
+#    Then I can view all of my paid bills with the most recent payment displaying at the top of the list
+#    And my oldest payment at the bottom of the list
 
   Scenario: Sort my Payment History by the oldest date
     When I sort my payments by date

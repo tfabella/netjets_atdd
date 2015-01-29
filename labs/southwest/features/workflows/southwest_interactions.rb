@@ -6,14 +6,17 @@ module SouthwestInteractions
     visit_page SouthwestHomePage
   end
 
-  def set_airports
-
+  def submit_city_pair
     on_page FlightSchedulePage do |page|
-      page.departure_city =  'originAirport_displayed'
-      page.arrival_city = 'destinationAirport_displayed'
-      page.submit
+      page.departure_city =  'CMH'
+      page.arrival_city = 'FLL'
+      page.search
     end
     sleep 2
+  end
+
+  def view_all_flights_for_today
+    page = on_page FlightScheduleResultsPage
   end
 
 end

@@ -21,6 +21,18 @@ module ViewPaymentHistoryInteractions
     end
   end
 
+  def gather_payment_history
+    page = on_page PaymentHistory
+    results = page.response
+    results
+  end
+
+  def sort_by_date
+    page = on_page PaymentHistoryByDate
+    results = page.response_by_date
+    results
+  end
+
 end
 
 World ViewPaymentHistoryInteractions
