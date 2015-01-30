@@ -22,8 +22,8 @@ class AboutTrueAndFalse < Test::Unit::TestCase
   end
 
   def test_boolean_value_of_various_objects
-    assert_equal __, truth_value(1)
-    assert_equal __, truth_value(0)
+    assert_equal true, truth_value(1)
+    assert_equal false, truth_value(0)
     assert_equal __, truth_value([])
     assert_equal __, truth_value({})
     assert_equal __, truth_value("Strings")

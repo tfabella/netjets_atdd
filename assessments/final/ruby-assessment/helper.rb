@@ -1,5 +1,5 @@
-require 'test/unit'
-require 'test/unit/assertions'
+require 'page-object'
+require 'cucumber'
 
 def ruby_version?(version)
   RUBY_VERSION =~ /^#{version}/ ||

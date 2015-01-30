@@ -1,5 +1,5 @@
-require 'locale'
-require 'test/unit'
+require 'page-object'
+require 'watir-webdriver'
 
 When(/^I access Wikipedia for my language$/) do
   @browser.goto "http://wikipedia.com"
